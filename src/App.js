@@ -35,15 +35,12 @@ const App = () => {
     <div className="categories-container">
 
       {categories.map(({title, id, imageUrl}) => {
-        return <div 
-        key={id} 
-        className="category-container"
-        style={{backgroundImage: `url(${imageUrl})`}}>
-          <div className="category-body-container">
-            <h2>{title}</h2>
-            <p>Shop Now!</p>
-          </div>
-        </div>
+        return <div key={id} className="category-container" style={{backgroundImage: `url(${imageUrl})`}}>
+                  <div className="category-body-container">
+                    <h2>{title}</h2>
+                    <p>Shop Now!</p>
+                  </div>
+                </div>
 
       })}
 
