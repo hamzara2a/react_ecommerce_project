@@ -1,4 +1,8 @@
-import { signInWithGooglepopup, createUserDocumentFromAuth } from "../../Utils/Firebase/Firebase";
+import SignUp from "../../Components/Sign-up/Sign-up";
+import { 
+    signInWithGooglepopup, 
+    createUserDocumentFromAuth
+} from "../../Utils/Firebase/Firebase";
 
 const SignIn = () => {
 
@@ -9,12 +13,15 @@ const SignIn = () => {
         const { user } = await signInWithGooglepopup();
         const userDocRef = await createUserDocumentFromAuth(user)
     }
+
     return (
         <div>
             <h1>Sign-in Page!</h1>
             <button onClick={logGoogleUser}>
-                Sign in with google popup
+                Sign in with google popup!
             </button>
+            <SignUp />
+    
         </div>
 
     )
