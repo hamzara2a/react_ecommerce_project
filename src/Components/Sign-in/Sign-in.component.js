@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import FormInput from '../Form-input/Form-input';
 import Button from '../Button/Button';
+import { UserContext } from '../../Contexts/User.contexts';
 
 import { 
     signInWithGooglepopup, 
@@ -9,6 +10,8 @@ import {
     signInAuthUserWithEmailAndPassword 
 } from '../../Utils/Firebase/Firebase';
 import './Sign-in.scss';
+//---------------------------------------------------------------
+
 
 const defaultformFields = {
     email: '',
@@ -20,6 +23,8 @@ const SignIn = () => {
     const [formFields, setFormFields] = useState(defaultformFields)
     const { email, password } = formFields;
 
+    const { setCurrentUser } = useContext(UserContext)
+
     //----------------------------------------
 
     
@@ -28,12 +33,19 @@ const SignIn = () => {
         setFormFields({...formFields, [name]: value})
     }
 
+    const resetFormFields = () => {
+        setFormFields(defaultformFields);
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault(); // "we don't want any default behavior. We will handle everything in the form ourselves"
 
         try {
-            const response = await signInAuthUserWithEmailAndPassword(email, password);
-            console.log(response);
+            
+            const { user } = await signInAuthUserWithEmailAndPassword(email, password);
+            setCurrentUser(user);
+            resetFormFields();
+
         } catch (error) {
 
             switch(error.code) {

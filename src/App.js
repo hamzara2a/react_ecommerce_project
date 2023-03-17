@@ -3,7 +3,6 @@ import Home from "./Routes/Home/Home";
 import Navigation from "./Routes/Navigation/Navigation";
 import Authentication from "./Routes/Authentication/Authentication";
 
-
 const Shop = () => {
   return <h1>Hi There!</h1>
 }
