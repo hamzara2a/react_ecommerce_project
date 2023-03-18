@@ -1,12 +1,10 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 
 import FormInput from '../Form-input/Form-input';
 import Button from '../Button/Button';
-import { UserContext } from '../../Contexts/User.contexts';
 
 import { 
     signInWithGooglepopup, 
-    createUserDocumentFromAuth, 
     signInAuthUserWithEmailAndPassword 
 } from '../../Utils/Firebase/Firebase';
 import './Sign-in.scss';
@@ -23,7 +21,6 @@ const SignIn = () => {
     const [formFields, setFormFields] = useState(defaultformFields)
     const { email, password } = formFields;
 
-    const { setCurrentUser } = useContext(UserContext)
 
     //----------------------------------------
 
@@ -42,7 +39,7 @@ const SignIn = () => {
 
         try {
             
-            const { user } = await signInAuthUserWithEmailAndPassword(email, password);
+            await signInAuthUserWithEmailAndPassword(email, password);
             resetFormFields();
 
         } catch (error) {
@@ -63,8 +60,7 @@ const SignIn = () => {
     //database access functions should always be async
     //because we don't want our program to be blocked while searching the database
     const signInWithGoogle = async () => {
-        const { user } = await signInWithGooglepopup();
-        await createUserDocumentFromAuth(user)
+        await signInWithGooglepopup();
     }
     return (
 
