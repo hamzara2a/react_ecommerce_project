@@ -8,7 +8,12 @@ import { signOutUser } from "../../Utils/Firebase/Firebase";
 import CartIcon from "../../Components/Cart-icon/Cart-icon";
 import CartDropdown from "../../Components/Cart-dropdown/Cart-dropdown";
 
-import "./Navigation.scss";
+import {
+    NavigationContainer, 
+    NavLinksContainer, 
+    LogoContainer, 
+    Navlink
+} from "./Navigation.styles";
 
 const Navigation = () => {
     const { currentUser } = useContext(UserContext)
@@ -17,28 +22,28 @@ const Navigation = () => {
     //console.log(currentUser)
     return (
         <Fragment>
-            <div className='navigation'>
-                <Link className='logo-container' to='/'>
+            <NavigationContainer>
+                <LogoContainer to='/'>
                     <CrwnLogo className='logo' />
-                </Link>
-                <div className='nav-links-container'>
-                    <Link className='nav-link' to='/shop'>
+                </LogoContainer>
+                <NavLinksContainer>
+                    <Navlink to='/shop'>
                         SHOP
-                    </Link>
+                    </Navlink>
                     {currentUser ? 
                         (
-                         <span className="nav-link" onClick={signOutUser}>SIGN OUT</span>
+                         <Navlink as='span' onClick={signOutUser}>SIGN OUT</Navlink>
                         )
                         :
                         (
-                        <Link className='nav-link' to='/auth'>
+                        <Navlink to='/auth'>
                         SIGN IN
-                        </Link>
+                        </Navlink>
                         )}
                     <CartIcon />
-                </div>   
+                </NavLinksContainer>   
                 {isCartOpen && <CartDropdown />}
-            </div>
+            </NavigationContainer>
             <Outlet />
         </Fragment>
     )
