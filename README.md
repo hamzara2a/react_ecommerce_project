@@ -1,6 +1,6 @@
 # React Ecommerce Project (日本語の説明は下記)
 
-##ENGLISH 
+## ENGLISH 
 
 ### Summary/要約
 
@@ -27,13 +27,13 @@ In this project, I created a mock E-commerce store containing almost all the fun
 
 ----------------------------------------------
 
-##日本語
+## 日本語
 
-###要約
+### 要約
 
 このプロジェクトは、模擬電子商取引のプログラミングプロジェクトです。すべてごろの特徴を作ってみました
 
-###あてはめましたもの
+### あてはめましたもの
 
 * Google Firebaseを使ってログアウト・ログインの特徴
 
