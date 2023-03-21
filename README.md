@@ -2,14 +2,13 @@
 
 ## ENGLISH 
 
-### Summary/要約
+### Summary
 
 In this project, I created a mock E-commerce store containing almost all the functionalities present in a typical E-commerce store
-このプロジェクトは、模擬電子商取引のプログラミングプロジェクトです。すべてごろの特徴を作ってみました
 
-### What I Applied In This Project/あてはめましたもの
+### What I Applied In This Project
 
-* Authentication (SignIn/Signout) feature using Firebase Authentication・**Google Firebaseを使ってログアウト・ログインの特徴**
+* Authentication (SignIn/Signout) feature using Firebase Authentication.
 
 * Storing new registered users in a Firestore database.
 
