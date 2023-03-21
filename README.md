@@ -25,7 +25,7 @@ In this project, I created a mock E-commerce store containing almost all the fun
 
 * React contexts to store the contexts of users, product categories, and the cart.
 
-----------------------------------------------
+---
 
 ## 日本語
 
