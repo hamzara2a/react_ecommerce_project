@@ -7,26 +7,18 @@ In this project, I created a mock E-commerce store containing almost all the fun
 
 ## What I Applied In This Project/あてはめましたもの
 
-* Authentication (SignIn/Signout) feature using Firebase Authentication
-Google Firebaseを使ってログアウト・ログインの特徴
+* Authentication (SignIn/Signout) feature using Firebase Authentication・**Google Firebaseを使ってログアウト・ログインの特徴**
 
-* Storing new registered users in a Firestore database
-あたしい登録したユーザーデータの保存するの特徴
+* Storing new registered users in a Firestore database・**あたしい登録したユーザーデータの保存するの特徴**
 
-* Client-side routing using react-router
-React-routerを使って、クライエントーサイドルーティング
+* Client-side routing using react-router・**React-routerを使って、クライエントーサイドルーティング**
 
-* An "Add to cart" and "dropdown" functionality where users can add selected items to the cart
-"Add to cart"の特徴。この特徴で、欲しいものをカートに追加できます
+* An "Add to cart" and "dropdown" functionality where users can add selected items to the cart・**"Add to cart"の特徴。この特徴で、欲しいものをカートに追加できます**
 
-* A checkout component that displays all the selected items and shows a total amount
-チェックアウト特徴。このページで、すべての選択したものの全額をみえます
+* A checkout component that displays all the selected items and shows a total amount・**チェックアウト特徴。このページで、すべての選択したものの全額をみえます**
 
-* Items classified in categories (Hats, Jackets, Sneakers, etc)
-ホームページにカテゴリーから分けたもの
+* Items classified in categories (Hats, Jackets, Sneakers, etc)・**ホームページにカテゴリーから分けたもの**
 
-* CSS using the 'styled components' library
-'styled components' というライブラリーを使ってCSSを書きました
+* CSS using the 'styled components' library・**'styled components' というライブラリーを使ってCSSを書きました**
 
-* React contexts to store the contexts of users, product categories, and the cart
-React部品の文脈のデータを保存して上記の特徴を作れました
+* React contexts to store the contexts of users, product categories, and the cart・**React部品の文脈のデータを保存して上記の特徴を作れました**
