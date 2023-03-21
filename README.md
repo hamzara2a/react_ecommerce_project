@@ -24,7 +24,7 @@ In this project, I created a mock E-commerce store containing almost all the fun
 
 * React contexts to store the contexts of users, product categories, and the cart.
 
-### [Live Demonstration](https://iridescent-eclair-e5b506.netlify.app/)
+### [Click Here For A Live Demonstration](https://iridescent-eclair-e5b506.netlify.app/) of this project
 ---
 
 ## 日本語
@@ -51,5 +51,5 @@ In this project, I created a mock E-commerce store containing almost all the fun
 
 * React部品の文脈のデータを保存して上記の特徴を作れました
 
-### [ライブサイト](https://iridescent-eclair-e5b506.netlify.app/)
+### [ライブサイトを見たいなら、クリックしてください](https://iridescent-eclair-e5b506.netlify.app/)
 ---
