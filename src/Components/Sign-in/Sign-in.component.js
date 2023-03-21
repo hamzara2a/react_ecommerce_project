@@ -7,7 +7,9 @@ import {
     signInWithGooglepopup, 
     signInAuthUserWithEmailAndPassword 
 } from '../../Utils/Firebase/Firebase';
-import './Sign-in.scss';
+
+import { SignInContainer, ButtonsContainer } from './Sign-in.styles';
+
 //---------------------------------------------------------------
 
 
@@ -66,7 +68,7 @@ const SignIn = () => {
 
         
 
-        <div className="sign-in-container">
+        <SignInContainer>
             <h2>Already Have An Account?</h2>
             <span>Sign in With Your Email and password!</span>
             <form onSubmit={handleSubmit}>
@@ -89,7 +91,7 @@ const SignIn = () => {
                     value={password}
                 />
 
-                <div className="buttons-container">
+                <ButtonsContainer>
                     <Button type="submit">SIGN IN!</Button>
 
                     {/* by default, buttons will try to submit. 
@@ -100,10 +102,10 @@ const SignIn = () => {
                         onClick={signInWithGoogle}>
                             GOOGLE SIGN IN!
                     </Button>
-                </div>
+                </ButtonsContainer>
                 
             </form>
-        </div>
+        </SignInContainer>
 
     )
 }

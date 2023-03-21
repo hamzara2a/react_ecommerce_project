@@ -2,7 +2,7 @@ import { useContext, useState, useEffect, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import { CategoriesContext } from "../../Contexts/Categories-context";
 import ProductCard from "../../Components/ProductCard/ProductCard";
-import "./Category.scss";
+import { CategoryContainer, CategoryTitle } from "./Category.styles.js";
 
 const Category = () => {
     //we will get 'category' as a parameter.
@@ -19,15 +19,15 @@ const Category = () => {
         //the && tells the code 'hey, don't render this code before the products have asynchronously arrived at the state
        
         <Fragment>
-            <h2 className="category-title">{category.toUpperCase()}</h2>
-            <div className="category-container">
+            <CategoryTitle>{category.toUpperCase()}</CategoryTitle>
+            <CategoryContainer>
                 {
                     products && products.map((product) => (
                     <ProductCard key={product.id} product={product} /> 
                     )
                     )
                 }
-            </div>
+            </CategoryContainer>
         </Fragment>
     )
 }

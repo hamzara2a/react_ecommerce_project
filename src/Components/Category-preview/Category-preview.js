@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
-import "./Category-preview.scss";
+import { CategoryPreviewContainer, Title, Preview } from "./Category-preview.styles"; 
 import ProductCard from "../ProductCard/ProductCard";
 
 const CategoryPreview = ({ title, products }) => {
     return(
-        <div className='category-preview-container'>
+        <CategoryPreviewContainer>
             <h2>
-                <Link className='title' to={title}>
+                <Title to={title}>
                     {title.toUpperCase()}
-                </Link> {/* This way, the click happens when the text is clicked, not when the h2 'box' is clicked */}
+                </Title> {/* This way, the click happens when the text is clicked, not when the h2 'box' is clicked */}
             </h2>
-            <div className="preview">
+            <Preview>
                 {
                     products
                         .filter((_, idx) => idx < 4)
@@ -18,9 +17,9 @@ const CategoryPreview = ({ title, products }) => {
                         (<ProductCard key={product.id} product={product} /> )
                         )
                 }
-            </div>
+            </Preview>
 
-        </div>
+        </CategoryPreviewContainer>
 
     )
 }
