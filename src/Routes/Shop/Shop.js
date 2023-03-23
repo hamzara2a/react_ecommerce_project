@@ -3,7 +3,7 @@ import CategoriesPreview from "../Categories-preview/Categories-preview";
 import Category from "../Category/Category";
 
 const Shop = () => {
-    return (
+    return ( 
         <Routes>
             <Route index element={<CategoriesPreview />}></Route>
             <Route path=":category" element={<Category />}></Route>
