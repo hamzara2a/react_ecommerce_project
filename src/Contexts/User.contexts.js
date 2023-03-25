@@ -3,10 +3,7 @@ import { createUserDocumentFromAuth, onAuthStateChangedListener } from "../Utils
 import { createAction } from "../Utils/Reducer/Reducer.utils";
 
 // the actual value I want to access
-export const UserContext = createContext({
-    currentUser: null,
-    setCurrentUser: () => null,
-})
+
 
 export const USER_ACTION_TYPES = {
     SET_CURRENT_USER: 'SET_CURRENT_USER'
@@ -43,19 +40,19 @@ export const UserProvider = ({ children }) => {
             createAction(USER_ACTION_TYPES.SET_CURRENT_USER,user)
             )
     }
-    // This allows the children to use any of the 'values' from the UserContext component
-    const value = { currentUser, setCurrentUser };
+    // // This allows the children to use any of the 'values' from the UserContext component
+    // const value = { currentUser, setCurrentUser };
+aaaa
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChangedListener((user) => {
+    //         if(user) {
+    //             createUserDocumentFromAuth(user)
+    //         }
+    //         setCurrentUser(user)
+    //     });
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChangedListener((user) => {
-            if(user) {
-                createUserDocumentFromAuth(user)
-            }
-            setCurrentUser(user)
-        });
-
-        return unsubscribe; //"unsubscribe whenever you unmount"
-    }, [])
+    //     return unsubscribe; //"unsubscribe whenever you unmount"
+    // }, [])
 
     return <UserContext.Provider value={value}>
         {children}
