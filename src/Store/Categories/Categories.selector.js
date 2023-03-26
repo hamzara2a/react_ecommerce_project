@@ -20,4 +20,9 @@ export const selectCategoriesMap = createSelector(
 
 )
 
+export const selectIsCategoriesLoading = createSelector(
+    [selectCategoryReducer],
+    (categoriesSlice) => categoriesSlice.isLoading
+)
+
 //memoization: if the categories do not change, then don't rerun the reduce function!

@@ -8,7 +8,6 @@ import Navigation from "./Routes/Navigation/Navigation";
 import Authentication from "./Routes/Authentication/Authentication";
 import Shop from "./Routes/Shop/Shop";
 import Checkout from "./Routes/Checkout/Checkout";
-
 const App = () => {
 
   const dispatch = useDispatch()
