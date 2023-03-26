@@ -1,6 +1,5 @@
 import { createAction } from "../../Utils/Reducer/Reducer.utils";
 import { CATEGORIES_ACTION_TYPES } from "./Categories.types";
-import { getCategoriesAndDocuments } from "../../Utils/Firebase/Firebase";
 
 export const setCategories = (categories) => {
     return createAction(
@@ -20,17 +19,3 @@ export const fetchCategoriesFailed = (error) => createAction(
     CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_FAILED,
     error)
 
-//thunk recommends you declare your thunk functions with 'async'
-export const fetchCategoriesAsync = () => async (dispatch) => {
-    
-    dispatch(fetchCategoriesStart());
-
-    try {
-        const categoriesArray = await getCategoriesAndDocuments('categories');
-        dispatch(fetchCategoriesSuccess(categoriesArray))
-
-    } catch(error) {
-        dispatch(fetchCategoriesFailed(error))
-
-    }
-}
