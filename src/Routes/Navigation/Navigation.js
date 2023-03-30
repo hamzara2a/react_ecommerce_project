@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ReactComponent as CrwnLogo } from "../../Assets/crown.svg";
+import { ReactComponent as ShirtLogo } from "../../Assets/shirt_svg.svg";
 import { signOutUser } from "../../Utils/Firebase/Firebase";
 import { selectCurrentUser } from "../../Store/User/User.selector";
 import CartIcon from "../../Components/Cart-icon/Cart-icon";
@@ -24,7 +24,7 @@ const Navigation = () => {
         <Fragment>
             <NavigationContainer>
                 <LogoContainer to='/'>
-                    <CrwnLogo className='logo' />
+                    <ShirtLogo />
                 </LogoContainer>
                 <NavLinksContainer>
                     <Navlink to='/shop'>
